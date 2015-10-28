@@ -43,6 +43,6 @@ $(document).ready(function(){
 
 
 
-// $(".reset").on(function(){
+//$(".reset").on(function(){
 
 // })
