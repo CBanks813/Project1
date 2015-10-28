@@ -12,11 +12,14 @@
   border: solid black 5px;
 }
 
-.pic {
+img {
   height:125px;
   width: 125px;
-  display: none;
   float: inherit;
+}
+
+.pic {
+  display: none;
 }
 
 table {
@@ -42,6 +45,7 @@ h1 {
 .pick img {
   display: inline-block;
 }
+
 
 /*.show {
   display: block;

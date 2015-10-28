@@ -1,34 +1,48 @@
 $(document).ready(function(){
+  var temp = []
 
-clickcounter = 0;
-   $(".square").on("click", function(){
-     clickcounter++
-     console.log(clickcounter)
-     // toggle class to show
-     $(this).toggleClass("pick");
-      });
-var target = event.target
+  clickcounter = 0;
+  $(".square").on("click", function(){
+    clickcounter++
+    // console.log(clickcounter)
+    $(this).toggleClass("pick");
+    temp.push($(this)[0].firstChild)
+    // console.log(temp);
+    if (clickcounter % 2 == 0) {
+      checkMatch()
+    }
 
-var checkMatch = function match() {
-  // on match, toggle class to indicate match
+  });
+  function checkMatch() {
+    // on match, toggle class to indicate match
+    // var picked_images = $(".pick img");
+    var first_picked = temp[0];
+    //  console.log(first_picked);
+    var second_picked = temp[1];
+    // console.log("1st.src", first_picked.src);
+    if (first_picked.src == second_picked.src) {
+      // console.log("matched");
+      //when images are matched keep displayed
+      //class of match
+    } else {
+      //when images are not matched hide again.
+      temp.forEach(logArrayElements)
+    }
 
-}
+  }
 
-    // if (clickcounter % 2 == 1) {
-    //   console.log("working")
-    //   $(this).show();
-    // } else {
-    //   $(this).hide();
-    // }
-
+  function logArrayElements(element) {
+    console.log(element.classList);
+  }
 });
- // $(".square").on("click", function(){
- // });
+
+//
 
 
 
 
 
- $(".reset").on(function(){
 
-})
+// $(".reset").on(function(){
+
+// })
